@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class LineComparisonProgram
 {
 
+
     public static void getInput ()
     {
         inputLineComparision line1 = new inputLineComparision();//Line1Comparison
@@ -32,13 +33,18 @@ public class LineComparisonProgram
         double length2 = calculateLength(line2.getX1(), line2.getY1(), line2.getX2(), line2.getY2());
         System.out.println("length for line2 = " +length2);
 
+        if (length1==length2){
+            System.out.println("length1 is equal to length2");}
+        else{
+            System.out.println("length1 is not equal to length2");
     }
-    public static double calculateLength(double x1,double y1,double x2,double y2) //Line1 is assigned
+
+    }
+    public static double calculateLength(double x1,double y1,double x2,double y2) //Line points are assigned
     {
         double length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         return length;
     }
-
 
 
 
